@@ -76,7 +76,7 @@ public class ShareClient {
     public let username: String
     public let password: String
     
-    private let shareServer:String?
+    private let shareServer:String
     private var token: String?
     
     public init(username: String, password: String, shareServer:ShareServer=ShareServer.US) {
@@ -118,7 +118,7 @@ public class ShareClient {
             "applicationId": dexcomApplicationId
         ]
         
-        guard let url = URL(string: shareServer! + dexcomLoginPath) else {
+        guard let url = URL(string: shareServer + dexcomLoginPath) else {
             return callback(ShareError.fetchError, nil)
         }
         
@@ -151,7 +151,7 @@ public class ShareClient {
                 return callback(error, nil)
             }
             
-            guard var components = URLComponents(string: self.shareServer! + dexcomLatestGlucosePath) else {
+            guard var components = URLComponents(string: self.shareServer + dexcomLatestGlucosePath) else {
                 return callback(.fetchError, nil)
             }
             
