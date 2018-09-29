@@ -75,8 +75,7 @@ public class ShareService: ServiceAuthentication {
 
         let client = ShareClient(username: username, password: password, shareServer: url.absoluteString)
         client.fetchLast(1) { (error, _) in
-            completion(true, error)
-
+            completion(error == nil, error)
         }
         self.client = client
     }
