@@ -11,6 +11,7 @@
 		432B0E931CDFC3C50045347B /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432B0E881CDFC3C50045347B /* ShareClient.framework */; };
 		432B0E981CDFC3C50045347B /* ShareClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B0E971CDFC3C50045347B /* ShareClientTests.swift */; };
 		43C418AF1CE0488900405B6A /* ShareClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C418AE1CE0488900405B6A /* ShareClient.swift */; };
+		56A3DD7E2650C21000C7A3E4 /* ShareClient_watchos.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A3DD7C2650C21000C7A3E4 /* ShareClient_watchos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,9 @@
 		432B0E971CDFC3C50045347B /* ShareClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareClientTests.swift; sourceTree = "<group>"; };
 		432B0E991CDFC3C50045347B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C418AE1CE0488900405B6A /* ShareClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareClient.swift; sourceTree = "<group>"; };
+		56A3DD7A2650C21000C7A3E4 /* ShareClient_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShareClient_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A3DD7C2650C21000C7A3E4 /* ShareClient_watchos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareClient_watchos.h; sourceTree = "<group>"; };
+		56A3DD7D2650C21000C7A3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		56A3DD772650C21000C7A3E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +68,7 @@
 			children = (
 				432B0E8A1CDFC3C50045347B /* ShareClient */,
 				432B0E961CDFC3C50045347B /* ShareClientTests */,
+				56A3DD7B2650C21000C7A3E4 /* ShareClient-watchos */,
 				432B0E891CDFC3C50045347B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +78,7 @@
 			children = (
 				432B0E881CDFC3C50045347B /* ShareClient.framework */,
 				432B0E921CDFC3C50045347B /* ShareClientTests.xctest */,
+				56A3DD7A2650C21000C7A3E4 /* ShareClient_watchos.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +102,15 @@
 			path = ShareClientTests;
 			sourceTree = "<group>";
 		};
+		56A3DD7B2650C21000C7A3E4 /* ShareClient-watchos */ = {
+			isa = PBXGroup;
+			children = (
+				56A3DD7C2650C21000C7A3E4 /* ShareClient_watchos.h */,
+				56A3DD7D2650C21000C7A3E4 /* Info.plist */,
+			);
+			path = "ShareClient-watchos";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -97,6 +119,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				432B0E8C1CDFC3C50045347B /* ShareClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A3DD752650C21000C7A3E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A3DD7E2650C21000C7A3E4 /* ShareClient_watchos.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +169,24 @@
 			productReference = 432B0E921CDFC3C50045347B /* ShareClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		56A3DD792650C21000C7A3E4 /* ShareClient-watchos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56A3DD812650C21000C7A3E4 /* Build configuration list for PBXNativeTarget "ShareClient-watchos" */;
+			buildPhases = (
+				56A3DD752650C21000C7A3E4 /* Headers */,
+				56A3DD762650C21000C7A3E4 /* Sources */,
+				56A3DD772650C21000C7A3E4 /* Frameworks */,
+				56A3DD782650C21000C7A3E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShareClient-watchos";
+			productName = "ShareClient-watchos";
+			productReference = 56A3DD7A2650C21000C7A3E4 /* ShareClient_watchos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +205,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0900;
 					};
+					56A3DD792650C21000C7A3E4 = {
+						CreatedOnToolsVersion = 12.5;
+						DevelopmentTeam = Z6T84878UQ;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 432B0E821CDFC3C50045347B /* Build configuration list for PBXProject "ShareClient" */;
@@ -164,6 +217,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 432B0E7E1CDFC3C50045347B;
@@ -172,6 +226,7 @@
 			projectRoot = "";
 			targets = (
 				432B0E871CDFC3C50045347B /* ShareClient */,
+				56A3DD792650C21000C7A3E4 /* ShareClient-watchos */,
 				432B0E911CDFC3C50045347B /* ShareClientTests */,
 			);
 		};
@@ -186,6 +241,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		432B0E901CDFC3C50045347B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A3DD782650C21000C7A3E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,6 +270,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				432B0E981CDFC3C50045347B /* ShareClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A3DD762650C21000C7A3E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +411,7 @@
 				INFOPLIST_FILE = ShareClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mddub.ShareClient;
+				PRODUCT_BUNDLE_IDENTIFIER = me.graysonsmith.ShareClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -362,7 +431,7 @@
 				INFOPLIST_FILE = ShareClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mddub.ShareClient;
+				PRODUCT_BUNDLE_IDENTIFIER = me.graysonsmith.ShareClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -388,6 +457,76 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mddub.ShareClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		56A3DD7F2650C21000C7A3E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z6T84878UQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "ShareClient-watchos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.graysonsmith.ShareClient-watchos";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		56A3DD802650C21000C7A3E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z6T84878UQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "ShareClient-watchos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.graysonsmith.ShareClient-watchos";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -417,6 +556,15 @@
 			buildConfigurations = (
 				432B0EA01CDFC3C50045347B /* Debug */,
 				432B0EA11CDFC3C50045347B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56A3DD812650C21000C7A3E4 /* Build configuration list for PBXNativeTarget "ShareClient-watchos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A3DD7F2650C21000C7A3E4 /* Debug */,
+				56A3DD802650C21000C7A3E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
